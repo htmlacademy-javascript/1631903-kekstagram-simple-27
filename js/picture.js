@@ -12,8 +12,6 @@ const initializePosts = (similarPosts) => {
     postElement.querySelector('.picture__likes').textContent = likes;
     similarListFragment.append(postElement);
   });
-
   document.querySelector('.pictures').append(similarListFragment);
 };
-
 export {initializePosts};

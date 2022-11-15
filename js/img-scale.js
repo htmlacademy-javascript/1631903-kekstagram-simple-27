@@ -15,11 +15,12 @@ const scaleImage = (value = DEFAULT_SCALE) => {
 scaleButton.addEventListener('click', (evt) => {
   const currentValue = parseInt(inputScale.value, 10);
   const onSmallerScaleButtonClick = evt.target.classList.contains('scale__control--smaller');
+  const onBiggerScaleButtonClick = evt.target.classList.contains('scale__control--bigger');
   if (onSmallerScaleButtonClick && currentValue > MIN_SCALE) {
     const newValue = currentValue - STEP_SCALE;
     scaleImage(newValue);
   }
-  if (!onSmallerScaleButtonClick && currentValue < MAX_SCALE) {
+  if (onBiggerScaleButtonClick && currentValue < MAX_SCALE) {
     const newValue = currentValue + STEP_SCALE;
     scaleImage(newValue);
   }

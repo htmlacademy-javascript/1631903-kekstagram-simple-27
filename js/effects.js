@@ -105,7 +105,7 @@ const onFormChange = (evt) => {
   updateSlider();
 };
 
-const OnSliderUpdate = () => {
+const onSliderUpdate = () => {
   uploadImage.style.filter = 'none';
   effectLevel.value = '';
   if (isDefault()) {
@@ -123,6 +123,6 @@ const resetEffects = () => {
 
 updateSlider();
 uploadForm.addEventListener('change', onFormChange);
-sliderElement.noUiSlider.on('update', OnSliderUpdate);
+sliderElement.noUiSlider.on('update', onSliderUpdate);
 
 export {resetEffects};

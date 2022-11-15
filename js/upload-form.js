@@ -1,5 +1,4 @@
 /* eslint no-use-before-define: 0 */
-
 import {isEscapeKey} from './utils.js';
 import {resetScale} from './img-scale.js';
 import {resetEffects} from './effects.js';
@@ -12,7 +11,6 @@ const body = document.querySelector('body');
 const uploadFile = document.querySelector('#upload-file');
 const closeButton = document.querySelector('#upload-cancel');
 const submitButton = document.querySelector('.img-upload__submit');
-
 
 const pristine = new Pristine(uploadForm, {
   classTo: 'img-upload__text',
@@ -38,7 +36,6 @@ const hideModal = () => {
 const onEscKeydown = (evt) => {
   if (isEscapeKey(evt)) {
     evt.preventDefault();
-    hideModal();
   }};
 
 uploadFile.addEventListener('change', () => {
@@ -81,4 +78,4 @@ const setUserFormSubmit = (onSuccess) => {
   });
 };
 
-export {setUserFormSubmit};
+export {setUserFormSubmit, hideModal};
